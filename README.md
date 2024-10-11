@@ -21,66 +21,41 @@ The **Image Blog System** is a web application built using Django that allows us
 Clone the repository to your local machine:  
 git clone https://github.com/yourusername/image-blog-system.git  
 cd image-blog-system  
-2. Create the Virtual Environment  
-Create a virtual environment in the root directory:  
+### 2. Create the Virtual Environment  
+Create a virtual environment in the root directory:    
+python -m venv venv  
+Activate the virtual environment:  
+venv\Scripts\activate   
 
-bash
-Copy code
-python -m venv venv
-Activate the virtual environment:
+### 3. Install Dependencies
+Install the required dependencies:  
+pip install -r requirements.txt  
+### 4. Set Up the Database  
+Run the migrations to set up the database:  
+python manage.py migrate  
+### 5. Create Media Folder  
+Create a folder named media in the root directory. This folder will store user-uploaded images:  
+mkdir media  
+### 6. Create a Superuser  
+Create a superuser to access the admin panel:  
+python manage.py createsuperuser  
+### 7. Run the Development Server  
+Start the development server:  
+python manage.py runserver  
+### 8. Access the Application  
+Open your web browser and navigate to http://127.0.0.1:8000/ to view the application.  
 
-On Windows:
-bash
-Copy code
-venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy code
-source venv/bin/activate
-3. Install Dependencies
-Install the required dependencies:
+### Usage
+Register an account or log in if you already have one.  
+Create a new blog post by navigating to the blog creation page.  
+Upload images and add descriptions.  
+View and interact with posts in the blog section.  
+### Contributing  
+Contributions are welcome! Feel free to submit a pull request or open an issue to discuss improvements.  
 
-bash
-Copy code
-pip install -r requirements.txt
-4. Set Up the Database
-Run the migrations to set up the database:
+### License  
+This project is licensed under the MIT License. See the LICENSE file for details.  
 
-bash
-Copy code
-python manage.py migrate
-5. Create Media Folder
-Create a folder named media in the root directory. This folder will store user-uploaded images:
-
-bash
-Copy code
-mkdir media
-6. Create a Superuser
-Create a superuser to access the admin panel:
-
-bash
-Copy code
-python manage.py createsuperuser
-7. Run the Development Server
-Start the development server:
-
-bash
-Copy code
-python manage.py runserver
-8. Access the Application
-Open your web browser and navigate to http://127.0.0.1:8000/ to view the application.
-
-Usage
-Register an account or log in if you already have one.
-Create a new blog post by navigating to the blog creation page.
-Upload images and add descriptions.
-View and interact with posts in the blog section.
-Contributing
-Contributions are welcome! Feel free to submit a pull request or open an issue to discuss improvements.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgments
-Django documentation for guidance on best practices.
-Community support and tutorials that helped in the development of this project.
+### Acknowledgments
+Django documentation for guidance on best practices.  
+Community support and tutorials that helped in the development of this project.  
